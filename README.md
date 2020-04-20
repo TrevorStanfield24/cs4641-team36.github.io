@@ -119,8 +119,86 @@ From these charts, we can see that the validation loss is at a minimum at the x 
 
 --heat map
 
+# Supervised Learning Models
+### [linear regression, k-nearest neighbors, support vector machine, and neural network]
+## Data Preprocessing
+With such a large data set size, we were unable to run the dataset as is without our programs crashing. Therefore, e ran PCA on the data in order to reduce the number of variables in our dataset while maintaining as much information as possible. We were able to experiment with the results that we could obtain. In addition to the convolutional neural net, we ran other supervised learning models such as linear regression, k-nearest neighbors, support vector machine, and neural network. We utilized sklearn’s Kfold and split the dataset into 10 training tests. Then we used sklearn’s LogisticRegression, RandomForestClassifier, KNeighborsClassifier, Support Vector Machine SVC, DecisionTreeClassifier and compared their mean accuracies.
+## Results
+Across all 5 of these procedures, Support Vector Machine consistently had the highest accuracy values. However, SVM also took the longest to run compared to the other models. We plotted their results in box plots. The following represent their mean accuracies and corresponding standard deviations in parenthesis.
+<!-- ![](images/Results_50%Variance.png) -->
+`50% Variance`
+- `LR: 0.760267 (0.013673)`
+- `RF: 0.836800 (0.011673)`
+- `KNN: 0.793333 (0.014883)`
+- `SVM: 0.842533 (0.008315)`
+- `DTC: 0.742400 (0.012744)`
+
+<div style="display:inline-block; padding-left:27.5%; padding-bottom:3%; padding-top:3%">
+    <figure width="45%" text-align= "center">
+    <img src="images/Results_50%Variance.png" />
+    <figcaption style = "text-align:center; padding-top:2%; padding-left:10%">
+        Plot 1. Comparison of Algorithms at 50% Variance
+    </figcaption>
+    </figure>
+</div>
+
+`65% Variance`
+- `LR: 0.763333 (0.009693)`
+- `RF: 0.832933 (0.011172)`
+- `KNN: 0.807467 (0.008686)`
+- `SVM: 0.839600 (0.008925)`
+- `DTC: 0.748800 (0.012368)`
+
+<div style="display:inline-block; padding-left:27.5%; padding-bottom:3%; padding-top:3%">
+    <figure width="45%" text-align= "center">
+    <img src="images/Results_65%Variance.png" />
+    <figcaption style = "text-align:center; padding-top:2%; padding-left:10%">
+        Plot 2. Comparison of Algorithms at 65% Variance
+    </figcaption>
+    </figure>
+</div>
+
+`80% Variance`
+- `LR: 0.739867 (0.016912)`
+-` RF: 0.809200 (0.011492)`
+- `KNN: 0.806133 (0.013012)`
+- `SVM: 0.811067 (0.012394)`
+- `DTC: 0.742667 (0.014010)`
+
+<div style="display:inline-block; padding-left:27.5%; padding-bottom:3%; padding-top:3%">
+    <figure width="45%" text-align= "center">
+    <img src="images/Results_80%Variance.png" />
+    <figcaption style = "text-align:center; padding-top:2%; padding-left:10%">
+        Plot 3. Comparison of Algorithms at 80% Variance
+    </figcaption>
+    </figure>
+</div>
+
+`95% Variance`
+- `LR: 0.740933 (0.011140)`
+- `RF: 0.815467 (0.021302)`
+- `KNN: 0.814267 (0.014884)`
+- `SVM: 0.821333 (0.014919)`
+- `DTC: 0.743467 (0.019670)`
+
+<div style="display:inline-block; padding-left:27.5%; padding-bottom:3%; padding-top:3%">
+    <figure width="45%" text-align= "center">
+    <img src="images/Results_95%Variance.png" />
+    <figcaption style = "text-align:center; padding-top:2%; padding-left:10%">
+        Plot 4. Comparison of Algorithms at 95% Variance
+    </figcaption>
+    </figure>
+</div>
 
 # Conclusion
+
+# Contributions
+- Krishna Patel - Supervised Learning Methods, Github pages setup
+- Justin Deal - Convolutional Neural Network
+- Anthony Marshall - Convolutional Neural Network
+- Ben Pooser - Supervised Learning Methods
+- Trevor Stanfield - Github pages maintenance
+
 
 # References
 [1] Brown, Ken. “Invasive Ductal Carcinoma (IDC) Breast Cancer: Johns Hopkins Breast Center.” Johns Hopkins Medicine, 3 Nov. 2017, www.hopkinsmedicine.org/breast_center/breast_cancers_other_conditions/invasive_ductal_carcinoma.html.
